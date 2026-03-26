@@ -6,3 +6,11 @@
     "REACT_APP_API_URL": "https://sms-backend-5rzs.onrender.com/api"
   }
 }
+{
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
