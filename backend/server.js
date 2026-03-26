@@ -12,7 +12,7 @@ const app = express();
 // ─── Middleware ───────────────────────────────────────────────────────────────
 app.use(cors({
   origin: [
-    'https://store-management-sms.vercel.app',
+    'https://store-management-system-psi.vercel.app',
     'http://localhost:3000',
   ],
   credentials: true,
