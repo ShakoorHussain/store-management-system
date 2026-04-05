@@ -9,24 +9,7 @@ dotenv.config();
 const app = express();
 
 // ─── CORS ─────────────────────────────────────────────────────────────────────
-app.use(cors({
-  origin: function(origin, callback) {
-    const allowedOrigins = [
-      'https://store-management-system-psi.vercel.app',
-      'http://localhost:3000',
-    ];
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
-  credentials: true,
-}));
-
-// Handle ALL preflight requests
+app.use(cors());
 app.options('*', cors());
 
 // ─── Middleware ───────────────────────────────────────────────────────────────
